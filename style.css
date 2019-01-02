@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #navbar {
@@ -10,6 +11,7 @@ body {
     position: fixed;
     top: 0;
     background:#f86449;
+    font-family: 'Titillium Web', sans-serif;
     
 }
 
@@ -32,6 +34,7 @@ nav a, nav a:visited {
 section .section-title {
     color: #f86449;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #welcome-section {
@@ -43,7 +46,7 @@ section .section-title {
 #welcome-section #intro-box {
 
     font-family: 'Titillium Web', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     width: 80%;
     margin: 300px 100px;
     position: absolute;
@@ -72,6 +75,12 @@ section#projects {
     justify-content: space-evenly;
 }
 
+@media only screen and (max-width: 600px) {
+    .project-container {
+        display: block;
+    }
+}
+
 .project-container a, .project-container a:visited {
     text-decoration: none;
     color: #45b29a;
@@ -79,6 +88,17 @@ section#projects {
 
 .project-item {
     width: 350px;
+}
+
+#more-projects {
+    justify-content: center;
+}
+#more-projects button {
+    border: 0px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #45b29a;
+    color: #fff;
 }
 
 
@@ -99,6 +119,9 @@ section#projects {
 footer {
     background: rgba(206, 243, 237, 0.877);
     padding: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    color: rgb(175, 174, 174);
+    font-size: 12px;
 }
 
 #copyright {
