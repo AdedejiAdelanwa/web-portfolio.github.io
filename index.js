@@ -22,6 +22,7 @@ closeMenu.addEventListener("click", () => {
   closeMenu.style.display = "none";
   openMenu.style.display = "block";
   navBar.style.height = "12vh";
+  navBar.style.backgroundColor = "rgb(39, 39, 39)";
   navLinks.style.display = "none";
   navBar.style.justifyContent = "center";
 });
