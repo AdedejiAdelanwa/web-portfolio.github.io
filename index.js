@@ -4,6 +4,7 @@ const openMenu = document.getElementById("open");
 const closeMenu = document.getElementById("close");
 const aboutLink = document.getElementById("about-link");
 const detailsEl = document.getElementById("details");
+const yearEl = document.getElementById("year");
 
 openMenu.addEventListener("click", () => {
   openMenu.style.display = "none";
@@ -29,3 +30,5 @@ aboutLink.addEventListener("click", () => {
   console.log("Link");
   detailsEl.setAttribute("open", "true");
 });
+
+yearEl.innerText = new Date().getFullYear();

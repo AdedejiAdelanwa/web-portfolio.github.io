@@ -8,8 +8,11 @@ body {
   padding: 0;
   font-family: "Titillium Web", sans-serif;
 }
+::selection {
+  background-color: #fc8cac;
+}
 body::-webkit-scrollbar {
-  width: 2rem;
+  width: 1.5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -55,10 +58,11 @@ nav a:visited {
   color: #fff;
 }
 
-section .section-title {
-  color: var(--peach);
+.section-title {
+  color: #fc8cac;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
 }
 
 #welcome-section {
@@ -123,45 +127,56 @@ details summary {
   border-bottom: 3px solid #fff55a;
 }
 
-section#projects {
+#projects {
+  margin-top: 3rem;
   display: flex;
+  flex-direction: column;
+
   text-align: center;
-  justify-content: center;
+  align-items: center;
 }
 
 .project-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 30px;
-  margin: 30px 60px;
-  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
 }
 
-@media only screen and (max-width: 600px) {
-  .project-container {
-    display: block;
-  }
-}
-
-.project-container a,
-.project-container a:visited {
+.project-container a {
   text-decoration: none;
   color: #45b29a;
 }
 
 .project-item {
-  width: 350px;
+  width: 24rem;
+  height: 26rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  overflow: hidden;
+  border-radius: 1.6rem;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
-
+.project-item img {
+  display: block;
+  height: 22rem;
+  max-width: 100%;
+}
+.project-item h4 {
+  font-size: 1.6rem;
+  margin-top: 5px;
+}
 #more-projects {
   justify-content: center;
 }
 #more-projects button {
   border: 0px;
-  border-radius: 20px;
-  padding: 15px;
+  border-radius: 2rem;
+  padding: 10px 20px;
   background-color: #45b29a;
   color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .contact-container {
@@ -179,18 +194,12 @@ section#projects {
 }
 
 footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background: rgba(206, 243, 237, 0.877);
-  padding: 20px;
-  font-family: "Titillium Web", sans-serif;
   color: rgb(66, 63, 63);
-  font-size: 14px;
-}
-
-#copyright {
-  float: left;
-}
-#fone-number {
-  float: right;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -198,7 +207,7 @@ footer {
     flex-direction: column-reverse;
     align-items: flex-end;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     background: rgb(39, 39, 39);
     font-family: "Titillium Web", sans-serif;
   }
@@ -206,8 +215,8 @@ footer {
     display: none;
   }
   .mobile-menu-icons {
-    margin-top: 10px;
-    margin-right: 5px;
+    margin-top: 1rem;
+    /* margin-right: 2rem; */
   }
   #nav-links li {
     padding: 10px 5px;
