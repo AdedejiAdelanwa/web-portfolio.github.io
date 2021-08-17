@@ -1,24 +1,37 @@
 :root {
   --peach: #f86449;
+  font-size: 62.5%;
 }
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: "Titillium Web", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 2rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fc8cac;
+  border-radius: 1.6rem;
 }
 
 #navbar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 100vw;
+  width: 100%;
   height: 12vh;
-
-  position: fixed;
-  top: 0;
-  background: var(--peach);
+  background: #272727;
   font-family: "Titillium Web", sans-serif;
-  z-index: 5;
+  font-size: 1.5rem;
+  z-index: 10;
 }
 
 #navbar ul {
@@ -49,30 +62,69 @@ section .section-title {
 }
 
 #welcome-section {
-  background-color: var(--peach);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(106deg, #fc8cac, #7cabae, #eeeeee);
+  background-size: 180% 180%;
+  color: #fff;
+  animation: gradient-animation 10s ease infinite;
   width: 100%;
   height: 100vh;
 }
+details {
+  font-size: 1.6rem;
+  width: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  overflow-y: auto;
+}
+details::-webkit-scrollbar {
+  width: 0.5rem;
+}
 
-#welcome-section #intro-box {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 32px;
-  width: 80%;
-  margin: 300px 100px;
-  position: absolute;
+details::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1.6rem;
+}
+
+details::-webkit-scrollbar-thumb {
+  background-color: #fc8cac;
+  outline: 1px solid slategrey;
+  border-radius: 1.6rem;
+}
+details summary {
   text-align: center;
-  color: #fff;
+  cursor: pointer;
+}
+
+#intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#intro-box img {
+  display: block;
+  border-radius: 50%;
 }
 
 #intro-box h1 {
   font-family: "Roboto Slab", serif;
+  font-size: 3.4rem;
 }
 
-#intro-box #role {
+#role {
+  font-size: 2.8rem;
   border-bottom: 3px solid #fff55a;
 }
 
 section#projects {
+  display: flex;
   text-align: center;
   justify-content: center;
 }
@@ -147,7 +199,7 @@ footer {
     align-items: flex-end;
     justify-content: center;
     width: 100vw;
-    background: var(--peach);
+    background: rgb(39, 39, 39);
     font-family: "Titillium Web", sans-serif;
   }
   #navbar #nav-links {
@@ -164,5 +216,15 @@ footer {
 
   #open {
     display: block;
+  }
+  #welcome-section {
+    height: 80vh;
+  }
+  #intro-box h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 2.5rem;
+  }
+  #role {
+    font-size: 2rem;
   }
 }
