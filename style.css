@@ -217,7 +217,6 @@ footer {
   }
   .mobile-menu-icons {
     margin-top: 1rem;
-    /* margin-right: 2rem; */
   }
   #nav-links li {
     padding: 10px 5px;
@@ -232,7 +231,7 @@ footer {
   }
   #intro-box h1 {
     font-family: "Roboto Slab", serif;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   #role {
     font-size: 2rem;
